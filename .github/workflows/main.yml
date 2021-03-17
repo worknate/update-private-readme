@@ -1,10 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+name: Generate README
 
-name: CI
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
@@ -13,49 +9,24 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
-      # Runs a single command using the runners shell
-      # - name: Generate README.md
-      #   run: |
-      #     npm ci
-      #     npm run readme
-
-      # - name: Checkout current repository to Master branch
-      #   uses: actions/checkout@v1
-      # - name: Setup NodeJs 13.x
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: '13.x'
-      # - name: Cache dependencies and build outputs to improve workflow execution time.
-
       - name: Install dependencies
         run: npm ci
       - name: Generate README.md
         run: npm run readme
-      - name: Commit change to readme
-        # uses: actions/checkout@v2
+      - name: Commit change
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "commit message"
           git push
-
-      # - name: Commit and Push new README.md to the repository
-      #   uses: mikeal/publish-to-github-action@main
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
