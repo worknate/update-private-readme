@@ -1,0 +1,19 @@
+{
+  "name": "update-private-readme",
+  "version": "1.0.0",
+  "description": "Automate the update or a README.md with GitHub actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://worknate@github.com/worknate/update-private-readme.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/worknate/update-private-readme/issues"
+  },
+  "homepage": "https://github.com/worknate/update-private-readme#readme"
+}
