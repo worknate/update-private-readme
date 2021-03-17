@@ -26,5 +26,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: npm run readme
+      - name: Generate README.md
+        run: |
+          npm ci
+          npm run readme
