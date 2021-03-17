@@ -5,7 +5,7 @@
 
 # update-private-readme
 
-[![Version badge](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://shields.io/)
+[![Version badge](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://shields.io/)
 
 ## Manually update readme
 
