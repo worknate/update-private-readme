@@ -1,6 +1,6 @@
 {
   "name": "update-private-readme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Automate the update or a README.md with GitHub actions",
   "main": "index.js",
   "scripts": {
