@@ -11,8 +11,6 @@ function generateReadMe() {
         if (err) throw err;
         const output = "<!--\n  WARNING: this file is auto-generated!\n  Make changes to readme.mustache\n-->\n\n" + Mustache.render(data.toString(), DATA);
         fs.writeFileSync('README.md', output);
-
-        console.log('process.env', process.env)
     });
 }
 generateReadMe();
