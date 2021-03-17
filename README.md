@@ -9,8 +9,8 @@
 
 Proof-of-concept to get package version from `package.json` and display as a badge.
 
-* Uses [mustache]() to provide a README template.
-* Uses a [GitHub Action]() to generate the README and commit the change.
+* Uses [mustache](https://github.com/janl/mustache.js) to provide a README template.
+* Uses a [GitHub Action](https://github.com/features/actions) to generate the README and commit the change.
 
 ## Manually update readme
 
